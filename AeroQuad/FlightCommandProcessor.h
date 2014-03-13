@@ -241,8 +241,12 @@ void processZeroThrottleFunctionFromReceiverCommand() {
  * and process command from the users
  */
 void readPilotCommands() {
-
+  //Set to read commands from serial inerface
+  //If you read from serial and not receiver it should work
+  
   readReceiver(); 
+  
+  
   
   if (receiverCommand[THROTTLE] < MINCHECK) {
     processZeroThrottleFunctionFromReceiverCommand();
